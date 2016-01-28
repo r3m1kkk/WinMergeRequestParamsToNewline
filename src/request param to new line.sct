@@ -1,0 +1,31 @@
+<scriptlet>
+
+<implements type="Automation" id="dispatcher">
+	<property name="PluginEvent">
+		<get/>
+	</property>
+	<property name="PluginDescription">
+		<get/>
+	</property>
+	<method name="RequestParamToNewline"/>
+</implements>
+
+<script language="VBS">
+Option Explicit
+
+Function get_PluginEvent()
+         get_PluginEvent = "EDITOR_SCRIPT"
+End Function
+
+Function get_PluginDescription()
+         get_PluginDescription = "Basic text functions for the context menu"
+End Function
+
+
+Function RequestParamToNewline(Text)
+	RequestParamToNewline = Replace(Text, "&", VbCrLf & "&")
+End Function
+
+
+</script>
+</scriptlet>
